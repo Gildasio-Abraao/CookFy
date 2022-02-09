@@ -15,24 +15,24 @@
         <div class="sidebar none">
             <nav>
                 <div class="nav-content">
-                    <div class="close-bar">
+                    <div class="close-bar" onclick="eventNavBar()">
                         <img src="images/assets/close.svg" alt="Close">
                         <p>Fechar</p>
                     </div>
 
                     <div class="profile user-menu">
-                        <img src="images/assets/Avatar_masculino.svg" alt="Avatar Masculino">
-                        <p class="user-name">Ethan Gomez</p>
+                        <img alt="User Avatar" class="avatar-user">
+                        <p class="user-name name"></p>
                     </div>
 
                     <div class="profile-contact">
                         <div class="email">
                             <img src="images/assets/Email.svg" alt="E-mail icon">
-                            <p>ethangomez@example.com</p>
+                            <p></p>
                         </div>
                         <div class="tel">
                             <img src="images/assets/Telefone.svg" alt="Telefone icon">
-                            <p>(951) 117 3743</p>
+                            <p></p>
                         </div>
                     </div>
 
@@ -57,7 +57,7 @@
                             <img src="images/assets/Senha.svg" alt="Password">
                             <p>Alterar senha</p>
                         </div>
-                        <div class="option">
+                        <div class="option" onclick="window.location.href = window.location.href">
                             <img src="images/assets/Sair.svg" alt="Leave">
                             <p>Sair</p>
                         </div>
@@ -65,9 +65,10 @@
                 </div>
             </nav>
         </div>
+        <!--modal-->
         <div class="modal none">
             <div class="modal-content">
-                <img src="images/assets/close.svg" alt="Close" class="close-modal">
+                <img src="images/assets/close.svg" alt="Close" class="close-modal" onclick="eventModal()">
                 <div class="content-left"></div>
                 <div class="content-right">
                     <div class="item-title">
@@ -90,7 +91,7 @@
                 </div>
             </div>
         </div>
-
+        <!--header element-->
         <header>
             <div class="logo">
                 <a href="#" target="_blank" rel="noopener noreferrer">
@@ -100,9 +101,9 @@
             <div class="input-box">
                 <input type="text" name="search" placeholder="Pesquise alguma receita" autocomplete="off">
             </div>
-            <div class="user-menu active-menu">
-                <p class="user-name">Marina</p>
-                <img src="images/assets/Avatar_feminino.svg" alt="User Image">
+            <div class="user-menu active-menu" onclick="eventNavBar()">
+                <p class="user-name name"></p>
+                <img alt="User Avatar" class="avatar-user">
             </div>
         </header>
         <!--first section-->
@@ -111,7 +112,7 @@
             <div class="content">
                 <div class="text-box">
                     <h1 class="title">
-                        Bem vindo de volta <span class="pink">Marina Wedderhoff</span>
+                        Bem vindo de volta <span class="pink name"></span>
                     </h1>
                     <div class="description">
                         <p>Contribuição da comunidade:</p>
@@ -122,7 +123,7 @@
                 <div class="image-box float-modal">
                     <div class="overlay">
                         <img src="images/louis-hansel@3x.png" alt="Food image">
-                        <div class="overlay-bar">
+                        <div class="overlay-bar" onclick="eventModal()">
                             <img src="images/assets/Seta_direita.svg" alt="Seta Direita">
                             <p>Ver foto</p>
                         </div>
@@ -140,14 +141,15 @@
             <div class="content">
                 <div class="image-box">
                     <div class="slide-overlay">
-                        <img src="images/patrick-kalkman@3x.png" alt="Food image - Patrick Kalkman">
+                        <img src="images/patrick-kalkman@3x.png" alt="Food image - Patrick Kalkman" class="image-slider">
+                        <img src="images/karly-gomez.jpg" alt="Food image - Karly Gomez" class="none image-slider">
                         <div class="overlay-bar">
                             <img src="images/assets/Seta_direita.svg" alt="Seta Direita">
                             <p>Ver receita</p>
                         </div>
                     </div>
                 </div>
-                <div class="text-box">
+                <div class="text-box slide-box">
                     <div class="description">
                         <p class="pink">Adicionado Ontem</p>
                     </div>
@@ -163,10 +165,34 @@
                         <img src="images/assets/Estrela.svg" alt="Estrela Avaliação" class="opacity-fade">
                     </div>
                     <div class="btn-case">
-                        <button class="slide-btn">
+                        <button class="slide-btn" onclick="changeSlider()">
                             <img src="images/assets/Seta_esquerda.svg" alt="Seta Esquerda">
                         </button>
-                        <button class="slide-btn">
+                        <button class="slide-btn" onclick="changeSlider()">
+                            <img src="images/assets/Seta_direita.svg" alt="Seta Direita">
+                        </button>
+                    </div>
+                </div>
+                <div class="text-box slide-box none">
+                    <div class="description">
+                        <p class="pink">Adicionado a 2 dias</p>
+                    </div>
+                    <p class="item-title">
+                        Iogurte de fruta crocante
+                    </p>
+                    <div class="description assessment-box pink">
+                        <p>Difícil</p>
+                        <img src="images/assets/Estrela.svg" alt="Estrela Avaliação">
+                        <img src="images/assets/Estrela.svg" alt="Estrela Avaliação">
+                        <img src="images/assets/Estrela.svg" alt="Estrela Avaliação">
+                        <img src="images/assets/Estrela.svg" alt="Estrela Avaliação">
+                        <img src="images/assets/Estrela.svg" alt="Estrela Avaliação" class="opacity-fade">
+                    </div>
+                    <div class="btn-case">
+                        <button class="slide-btn" onclick="changeSlider()">
+                            <img src="images/assets/Seta_esquerda.svg" alt="Seta Esquerda">
+                        </button>
+                        <button class="slide-btn" onclick="changeSlider()">
                             <img src="images/assets/Seta_direita.svg" alt="Seta Direita">
                         </button>
                     </div>
@@ -214,19 +240,24 @@
                 </div>
                 <div class="social-media">
                     <a href="#">
-                        <img src="images/assets/Fb.svg" alt="Facebook">
+                        <img src="images/assets/Fb.svg" alt="Facebook" class="white-social-media">
+                        <img src="images/assets/Fb_active.svg" alt="Facebook" class="active-social-media">
                     </a>
                     <a href="#">
-                        <img src="images/assets/IG.svg" alt="Instagram">
+                        <img src="images/assets/IG.svg" alt="Instagram" class="white-social-media">
+                        <img src="images/assets/IG_active.svg" alt="Instagram" class="active-social-media">
                     </a>
                     <a href="#">
-                        <img src="images/assets/Twitter.svg" alt="Twitter">
+                        <img src="images/assets/Twitter.svg" alt="Twitter" class="white-social-media">
+                        <img src="images/assets/Twitter_active.svg" alt="Twitter" class="active-social-media">
                     </a>
                     <a href="#">
-                        <img src="images/assets/Linkedin.svg" alt="Linkedin">
+                        <img src="images/assets/Linkedin.svg" alt="Linkedin" class="white-social-media">
+                        <img src="images/assets/Linkedin_active.svg" alt="Linkedin" class="active-social-media">
                     </a>
                     <a href="#">
                         <img src="images/assets/Pinterest.svg" alt="Pinterest">
+                        <img src="images/assets/Pinterest_active.svg" alt="Pinterest" class="active-social-media">
                     </a>
                 </div>
             </div>
